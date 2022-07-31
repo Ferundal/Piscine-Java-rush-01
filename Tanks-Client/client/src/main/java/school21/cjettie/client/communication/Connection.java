@@ -58,6 +58,7 @@ public class Connection {
                 System.err.println("ayayay");
             }
         }
+        System.err.println("Map read");
         return res;
     }
 

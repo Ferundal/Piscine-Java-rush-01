@@ -43,8 +43,8 @@ public class Game extends Application {
 
 
     static {
-        Image healsBarBorderImage = new Image(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/border.png").toURI().toString());
-        Image healsBarImage = new Image(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/life.png").toURI().toString());
+        Image healsBarBorderImage = new Image(Game.class.getResource("/images/border.png").toString());
+        Image healsBarImage = new Image(Game.class.getResource("/images/life.png").toString());
         healsBarPlayer = new ImageView(healsBarImage);
         healsBarPlayer.setFitHeight(HEALS_BAR_HEIGHT);
         healsBarPlayer.setFitWidth(HEALS_BAR_WIDTH);
@@ -64,14 +64,14 @@ public class Game extends Application {
 
 
         gameStatus = false;
-        Image boardImage = new Image(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/field.png").toURI().toString());
+        Image boardImage = new Image(Game.class.getResource("/images/field.png").toString());
         board = new ImageView(boardImage);
 
-        player = new Tank(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/player.png").toURI().toString());
-        enemy = new Tank(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/enemy.png").toURI().toString());
-        playerBullet = new Projectile(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/enemyBullet.png").toURI().toString());
-        enemyBullet = new Projectile(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/playerBullet.png").toURI().toString());
-        Image explosionImage = new Image(new File("/Users/dquordle/JavaPiscine/Rush01/MIsha/client/src/main/resources/images/fail.png").toURI().toString());
+        player = new Tank(Game.class.getResource("/images/player.png").toString());
+        enemy = new Tank(Game.class.getResource("/images/enemy.png").toString());
+        playerBullet = new Projectile(Game.class.getResource("/images/enemyBullet.png").toString());
+        enemyBullet = new Projectile(Game.class.getResource("/images/playerBullet.png").toString());
+        Image explosionImage = new Image(Game.class.getResource("/images/fail.png").toString());
         explosion = new ImageView(explosionImage);
 
 
